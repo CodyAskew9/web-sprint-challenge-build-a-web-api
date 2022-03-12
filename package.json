@@ -3,6 +3,8 @@
     "version": "0.0.1",
     "main": "index.js",
     "scripts": {
+        "start":"node index.js",
+        "server":"nodemon index.js",
         "test": "cross-env NODE_ENV=testing jest --verbose --runInBand --silent",
         "resetdb": "knex migrate:rollback && knex migrate:latest && knex seed:run"
     },
@@ -11,10 +13,11 @@
         "url": "git+https://github.com/BloomInstituteOfTechnology/web-sprint-challenge-build-a-web-api"
     },
     "dependencies": {
-        "@vscode/sqlite3": "5.0.7",
+        "sqlite3": "5.0.2",
         "express": "4.17.3",
         "helmet": "5.0.2",
-        "knex": "1.0.3"
+        "knex": "0.95.14"
+
     },
     "devDependencies": {
         "cross-env": "7.0.3",
